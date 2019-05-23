@@ -1,29 +1,18 @@
- import java.util.Scanner; 
-
 public class NormalizeAngle 
 {
-    Scanner scan;
-    int num;
-    int angle;
+ 
 
     public Integer normalizeValueUsingModulo(Integer angle)
     {
-        System.out.println("Enter a number...");
-        num = Integer.parseInt(scan.nextLine());
-        angle = num%360;
-        
-        System.out.println("Your normalized angle is : " + angle);
-        return angle;
+        return (angle %= 360) >= 0 ? angle : (angle + 360);
     }
 
     public Integer normalizeValueUsingFloorMod(Integer integer)
     {
-        System.out.println("Enter a number...");
-        num = Integer.parseInt(scan.nextLine());
-        angle = Math.floorMod(num,360);
+        int num = Math.floorMod(integer,360);
         
-        System.out.println("Your normalized angle is : " + angle);
-        return angle;
+        
+        return num;
     }
 
     public static void main(String[] args)
