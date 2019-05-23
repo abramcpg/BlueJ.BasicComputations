@@ -1,21 +1,40 @@
- 
+ import java.util.Scanner;
 
-
-public class IntegerPrinter {
-
-    public String printIntegerAsBinary(int value){
-        return null;
+public class IntegerPrinter 
+{
+    Scanner scan;
+    int value;
+    void getVal()
+    {
+        System.out.println("Decimal to HexaDecimal, Octal, and Binary");
+        scan = new Scanner(System.in);
+        System.out.println("\nEnter the number :");
+        value = Integer.parseInt(scan.nextLine());
+    }
+    
+    public String printIntegerAsBinary(int value)
+    {
+        String binary = Integer.toBinaryString(value);
+        System.out.println("Binary Value is : " + binary);
+        return binary;
+    }
+    
+    public String printIntegerAsOctal(int value)
+    {
+        String octal = Integer.toOctalString(value);
+        System.out.println("Octal Value is : " + octal);
+        return octal;
     }
 
-    public String printIntegerAsOctal(int value){
-        return null;
+    public String printIntegerAsHexadecimal(int value)
+    {
+        String hexa = Integer.toHexString(value);
+        System.out.println("HexaDecimal Value is : " + hexa);
+        return hexa;
     }
 
-    public String printIntegerAsHexadecimal(int value){
-        return null;
-    }
-
-    public static void main(String[] args){
+    public static void main(String[] args)
+    {
 
     }
 }
