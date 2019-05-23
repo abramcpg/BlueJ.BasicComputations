@@ -1,18 +1,40 @@
-import java.math.BigInteger;
+import java.util.Scanner;
 
-public class Factorial 
+
+public class ShortCalculator 
 {
-
-    public BigInteger factorialOf(Integer value)
-    {
-        BigInteger factorial = BigInteger.ONE;
-        
-        for (int i = value; i > 0; i--) 
+    public void main()
         {
-            factorial = factorial.multiply(BigInteger.valueOf(i));
+        public void collect()
+        {
+            short num1;
+            short num2;
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Pick a number");
+            num1 = scanner.nextShort();
+            System.opt.println("Pick a second number");
+            num2 = scanner.nextShort();
         }
-        
-        return factorial;
-    }
+         public void   absoluteConversion()
+         {
+             if (num1 < 0)
+             {
+                 num1 = num1 * -1;
+             }
+             if (num2 < 0)
+             {
+                 num2 = num2 * -1;
+             }
+         }
+         public void calculations()
+         {
+             short sum = num1 + num2;
+             short difference = num1 - num2;
+             short product = num1 * num2;
+             short quotient = num1 / num2;
+             short remainder = num1 % num2;
+    
+    
+        }
 
 }
